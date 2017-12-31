@@ -4,7 +4,7 @@ Its like wasap.my but its written in python using cherrypy web framework. This s
 
 ![screenshot](https://i.imgur.com/XGD8kms.png)
 
-Demo at [b.amirulabu.com:1337](http://b.amirulabu.com:1337)
+Demo at [https://w.amirulabu.com](https://w.amirulabu.com)
 
 ## Setup
 
