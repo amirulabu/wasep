@@ -2,7 +2,6 @@ import os.path
 import cherrypy
 from cherrypy.lib.static import serve_file
 
-
 class Wasep(object):
     def _cp_dispatch(self, vpath):
         if len(vpath) == 1:
@@ -30,17 +29,7 @@ class Wasep(object):
         else:
             return serve_file(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'index.html'))
 
-config = {
-    'global' : {
-        'server.socket_host' : '127.0.0.1',
-        'server.socket_port' : 8080,
-        'server.thread_pool' : 8
-    },
-    '/' : {
-        "tools.sessions.on": True,
-        "tools.staticdir.root": os.path.abspath(os.getcwd())
-    }
-}
+config = os.path.join(os.path.dirname(__file__), 'config.conf')
 
 if __name__ == '__main__':
     cherrypy.quickstart(Wasep(), config=config)

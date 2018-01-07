@@ -102,3 +102,5 @@ ENV/
 
 # vs code
 .vscode/
+
+config.conf
